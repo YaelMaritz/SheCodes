@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+
+<head>
+    <title>Superhero registration form</title>
+    <link href="css/style.css" rel="stylesheet" type="text/css">
+    <link href="css/button.css" rel="stylesheet" type="text/css">
+    <link href="css/html5reset-1.6.1.css" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,700" rel="stylesheet">
+</head>
+
+<body>
+    <div class="container">
+        <div class="main">
+            <h2>Superhero registration form</h2>
+            <form action="/action_page.php" autocomplete="on">
+                <fieldset>
+                    <legend>Super</legend>
+                    <p>Superhero name: <input type="text" name="superhero_name"> </p>
+                    <p>Alignment:</p>
+                        <input type="radio" name="alignment" value="good" checked> Good <br />
+                        <input type="radio" name="alignment" value="neutral"> Neutral <br />
+                        <input type="radio" name="alignment" value="evil"> Evil <br /> 
+                    <p>Motivation:</p>
+                        <input type="checkbox" name="motivation" value="vengance" checked> Vengance! <br />
+                        <input type="checkbox" name="motivation" value="money"> Money <br />
+                        <input type="checkbox" name="motivation" value="giggles"> Shits and giggles <br /> 
+                    <p>Superpower: <input type="text" list="powers" name="superpower"></p>
+                    <datalist id="powers">
+                        <option value="Flying">
+                        <option value="Force Field">
+                        <option value="Healing">
+                        <option value="Immortality">
+                        <option value="Intangibility">
+                        <option value="Invisibility">
+                        <option value="Invulnerability">
+                        <option value="Mind Control">
+                        <option value="Power Mimicry">
+                        <option value="Precognition">
+                        <option value="Superhuman Intelligence">
+                        <option value="Superhuman Speed">
+                        <option value="Superhuman Strength">
+                        <option value="Talking to Animals">
+                        <option value="Telepathy">
+                        <option value="Time Travel">
+                    </datalist>
+                </fieldset>
+                <fieldset>
+                    <legend>Alias</legend>
+                    <p>First Name: <input type="text" name="first_name"></p>
+                    <p>Last Name: <input type="text" name="last_name"></p>
+                    <p>Email: <input type="email" name="email"></p>
+                    <p>Age: <input type="number" name="age"></p>
+                </fieldset>
+                <input class="blue button" type="submit" value="Submit">
+            </form>
+        </div>
+    </div>
+</body>
+
+</html>
