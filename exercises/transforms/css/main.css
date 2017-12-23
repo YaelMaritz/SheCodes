@@ -14,47 +14,68 @@ body {
     width: 64rem;
     margin: 0 auto;
     background-color: rgb(126, 126, 126);
-    grid-template-rows: 4em 1fr 2em;
+    grid-template: "header" 4em "main" 1fr "footer" 2em / 1fr;
 }
 
-.nav {
+header {
     position: relative;
+    grid-area: header;
     background-color: rgb(13, 160, 135);
 }
 
-.main {
+nav {
+    position: absolute;
+    bottom: 1em;
+    right: 1em;
+}
+
+main {
+    grid-area: main;
     background-color: #fff;
 }
 
-.footer {
+footer {
+    grid-area: footer;
+    display: inline-grid;
+    align-content: center;
+    justify-content: center;
+    color: #fff;
     background-color: rgb(13, 160, 135);
-
 }
 
-ul {
-    position: absolute;
-    bottom: 0.6em;
-    right: 5em;
-    width: 7.75em;
-    margin: 0 auto;
-    background-color: rgb(181, 233, 133);
-    text-align: center;
-}
-
-li {
-    display: inline;
-    background-color: rgb(112, 170, 58);
-    padding: 0.1em 0 0.3em 0;
-    border-bottom: #000 0.3em solid;
-}
-
-.grow {
-    width: 50px;
-    height: 50px;
-    background-color: rgb(187, 9, 9);
-    transition: width 0.5s;
-}
-
-.grow:hover {
-    width: 250px;
+ .button {
+     background-color: #666;
+     padding: 0.5em 1em;
  }
+
+ /* Underline */
+.underline {
+    display: inline-block;
+    vertical-align: middle;
+    -webkit-transform: perspective(1px) translateZ(0);
+    transform: perspective(1px) translateZ(0);
+    box-shadow: 0 0 1px transparent;
+    position: relative;
+    overflow: hidden;
+  }
+  .underline:before {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    left: 0;
+    right: 100%;
+    bottom: 0;
+    background: #2098D1;
+    height: 4px;
+    -webkit-transition-property: right;
+    transition-property: right;
+    -webkit-transition-duration: 0.3s;
+    transition-duration: 0.3s;
+    -webkit-transition-timing-function: ease-out;
+    transition-timing-function: ease-out;
+  }
+  .underline:hover:before, .underline:focus:before, .underline:active:before {
+    right: 0;
+  }
+
+/* TODO: .underline:after - try to make it under the button */
